@@ -1,6 +1,7 @@
 class World {
 
     character = new Character();
+    endboss = new EndBoss();
     terains = [
         new Terain('img/5.Fondo/Capas/5.cielo_1920-1080px.png'),
         new Terain('img/5.Fondo/Capas/3.Fondo3/1.png'),
@@ -13,6 +14,8 @@ class World {
         new Chicken(),
     ];
     clouds = [
+        new Cloud(),
+        new Cloud(),
         new Cloud(),
         new Cloud(),
     ];
@@ -33,6 +36,7 @@ class World {
 
         this.addObjectsToMap(this.terains);
         this.addToMap(this.character);
+        this.addToMap(this.endboss);
         this.addObjectsToMap(this.enemies);
         this.addObjectsToMap(this.clouds);
 
