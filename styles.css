@@ -1,9 +1,110 @@
+html{
+    user-select: none;
+    font-family: 'Permanent Marker', cursive;
+}
+
 body{
+    margin: 0;
+    background-color: #b76127;
+}
+
+.d-none{
+    display: none;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #994409;
+    padding: 8px 8px 8px 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    scale: 1;
+    border: 1px transparent solid;
+}
+
+.btn:hover{
+    background-color: #b76127;
+    color: #45b6e6;
+    border: rgba(0,0,0,0.3) 1px solid;
+    transform: scale(1.1);
+}
+
+.btn-right{
+    border-bottom-right-radius: 16px;
+}
+
+.btn-left{
+    border-bottom-left-radius: 16px;
+}
+
+.window-background-sort{
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-canvas{
+.canvas{
     background-color: black;
+    border-radius: 32px;
+}
+.start-image{
+    width: 720px;
+    height: 480px;
+    border-radius: 30px;
+}
+
+.menu-sort-button{
+    display: flex;
+}
+
+.context{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+.load-image{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    animation: 5s test infinite;
+}
+
+.load-text{
+    color: rgba(0,0,0,0.5);
+    font-size: 30px;
+}
+
+.container-load-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    width: 720px;
+    text-align: center;
+}
+
+@keyframes test {
+    0%{
+        height: 100px;
+        width: 100px;
+    }
+    50%{
+        height: 200px;
+        width: 200px;
+    }
+    100%{
+        height: 100px;
+        width: 100px;
+    }
 }

@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Pollo Loco</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="./models/drawable-object.class.js"></script>
+    <script src="./models/collectable-bottle.class.js"></script>
+    <script src="./models/collectable-coins.class.js"></script>
+    <script src="./models/coin-bar.class.js"></script>
+    <script src="./models/bottle-bar.class.js"></script>
+    <script src="./models/status-bar.object.js"></script>
     <script src="./models/movable-object.class.js"></script>
+    <script src="./models/throwable-object.class.js"></script>
     <script src="./models/character.class.js"></script>
     <script src="./models/chicken.class.js"></script>
-    <script src="./models/boss-chicken.class.js"></script>
-    <script src="./models/cloud.class.js"></script>
-    <script src="./models/terain.class.js"></script>
     <script src="./models/world.class.js"></script>
+    <script src="./models/cloud.class.js"></script>
+    <script src="./models/keyboard.object.class.js"></script>
+    <script src="./models/background-object.class.js"></script>
+    <script src="./models/level.class.js"></script>
+    <script src="./models/endboss.class.js"></script>
+    <script src="./levels/level1.js"></script>
+
+
     <script src="./js/game.js"></script>
-    
+
 </head>
+
 <body onload="init()">
 
-    <h1>El polo loco</h1>
+    <div class="window-background-sort">
 
-    <canvas id="canvas" width="720" height="480">
+        <h1>EL POLLO LOCO</h1>
 
-    </canvas>
-    
+        <div id="container-load-image" class="container-load-image">
+            <img id="start-image" class="start-image" src="./img/9.Intro _ Outro Image/Start Screen/Opción 1.png">
+            <img id="load-image" class="d-none" src="./img/3.Secuencias_Enemy_básico/Versión_Gallinita (estas salen por orden de la gallina gigantona)/1.Ga_paso_derecho.png">
+            <p id="load-text" class="d-none">EL POLLO LOCO <br> is loading</p>
+        </div>
+
+        <canvas class="d-none" width="720" height="480" id="canvas">
+
+        </canvas>
+
+        <div class="menu-sort-button">
+
+            <a onclick="openGame()" class="btn btn-left">Start Game</a>
+            <a onclick="openCloseHELP()" class="btn">Controls</a>
+            <a onclick="fullscreen()" class="btn btn-right">FULLSCREEN</a>
+
+        </div>
+
+        <div class="d-none" id="help-context-show-hide">
+            <p>Space: jump</p>
+            <p>Arrow right: move right</p>
+            <p>Arrow left: move left</p>
+            <p>T: throw bottle</p>
+        </div>
+
+    </div>
+
+
+
+
+
 </body>
+
 </html>

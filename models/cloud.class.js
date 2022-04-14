@@ -1,21 +1,21 @@
-class Cloud extends MovableObject {
+class Cloud extends MovableObject{
 
+    y = 50;
     width = 500;
-    heigth = 250;
-    y = 20;
+    height = 250;
 
-    constructor() {
-        super().loadImage('img/5.Fondo/Capas/4.nubes/1.png');
+    constructor(){// der constructor wird immer als erstes dann ausgeführt wenn dieses Element ausgeführt wird.
+        super().loadImage('img/5.Fondo/Capas/4.nubes/1.png');// Der Pfad wird an movable-objects.loadImage(path) übergeben.
 
-        this.x = Math.random() * 500;
-        this.animate();
+        this.x = 200 + Math.random() * 500;// (-- Math.random() = 0,0 - 1,0 --) <== Math.random hat einen wert zwischen 0,0 und 1,0 --- 
+
+        this.animate(); // Hier wird die Funktion aufgerufen, jedesmal wenn der Construktor aufgerufen wird.
 
     }
 
     animate(){
-        setInterval(() => {
-            this.x -= 0.15;
-        }, 1000 / 60);
+        this.moveLeft();
     }
 
+    
 }
